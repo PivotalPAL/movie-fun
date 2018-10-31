@@ -3,6 +3,8 @@ package org.superbiz.moviefun;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.s3.AmazonS3Client;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,9 +16,11 @@ import org.superbiz.moviefun.blobstore.ServiceCredentials;
 
 @SpringBootApplication
 public class Application {
+    private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
     public static void main(String... args) {
-        SpringApplication.run(Application.class, args);
+      logger.info("******************** STARTING APPLICATION*******************888");
+      SpringApplication.run(Application.class, args);
     }
 
     @Bean
